@@ -1,112 +1,73 @@
+:root {
+  --background-clr: linear-gradient(
+    89.54deg,
+    #0b1944 10.58%,
+    #2498c9 39.03%,
+    #d9d9d9 64.72%,
+    #fffbf5 91.26%
+  );
+  --line-height: 1.5;
+  --font-weight: 400;
+  --font-title-size: 1.25rem;
+  --font-paragraph-size: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  font-weight: 400;
+  font-family: "Inter";
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #eeeeee;
-  font-family: young;
-  background: url(https://media.istockphoto.com/photos/abstract-background-mock-up-scene-geometry-shape-podium-for-product-picture-id1296735563?b=1&k=20&m=1296735563&s=170667a&w=0&h=DsOkmxKp6DHOneq8WfzTTPi35vQnvtaYHlQc6uDjpOA=)
-    no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
 }
 
-/* set up the hight and the width from the card */
-.card {
-  position: relative;
-  width: 330px;
-  height: 412px;
-  border-radius: 15px;
-  transition: 0.5s ease-out;
-  /* class effect */
-  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
-  background: rgb(128, 128, 128, 0.1);
-  backdrop-filter: blur(5px);
+.container-card {
+  background: var(--background-clr);
+  width: 458px;
+  height: 300px;
+  border-radius: 24px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* Is used to style the transparancy content overlay*/
-.card .content {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  background: rgba(255, 255, 255, 0.3);
-  box-sizing: border-box;
-  transition: 0.5s cubic-bezier(0.22, 0.68, 0, 1.71);
-  transition: 0.3s ease-out;
-  overflow: hidden;
-  padding: 12px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+img {
+  border-radius: 360px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 6.6rem;
+  height: 6.6rem;
 }
 
-/* The hover function is for the transparancy content overlay*/
-.card:hover .content {
-  width: 100%;
-  height: 60%;
-  text-align: center;
+.card-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.6rem;
+  color: #fff;
+  padding: 0.6rem 0.6rem;
 }
-.card:hover {
+
+.card-content h1 {
+  font-size: var(--font-title-size);
+}
+
+.card-content p {
+  font-size: var(--font-paragraph-size: );
+}
+
+svg {
+  margin-top: 2rem;
+  stroke: #fff;
+  padding: 0 0.6rem 0;
+  width: 3rem;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+svg:hover {
+  fill: #0b1944;
   transform: scale(1.1);
-}
-
-/* text-style  */
-h1 {
-  font-size: 18px;
-  text-align: left;
-  color: rgba(128, 128, 128);
-  text-shadow: 0px 0px 30px #0a0909;
-}
-
-p {
-  text-align: left;
-  font-size: 14px;
-  padding: 10px 10px;
-  color: rgba(128, 128, 128);
-}
-
-p,
-h1 {
-  margin: 0px;
-  padding: 10px;
-}
-
-/* Style all font icons */
-.fa {
-  padding: 10px 10px;
-  font-size: 10px;
-  width: 15px;
-  min-height: 15px;
-  text-decoration: none;
-  border-radius: 4px;
-  margin: 10px;
-}
-
-.fa:hover {
-  opacity: 0.7;
-  color: rgb(255, 255, 255);
-}
-
-/* specific color for each brand */
-
-/* codepen */
-.fa-codepen {
-  background: rgba(255, 255, 255, 0.5);
-  color: rgb(128, 128, 128);
-}
-/* github */
-.fa-github {
-  background: rgba(255, 255, 255, 0.5);
-  color: rgb(128, 128, 128);
-}
-/* Twitter */
-.fa-twitter {
-  background: rgba(255, 255, 255, 0.5);
-  color: rgb(128, 128, 128);
-}
-
-/* linkedin */
-.fa-linkedin {
-  background: rgba(255, 255, 255, 0.5);
-  color: rgb(128, 128, 128);
 }
